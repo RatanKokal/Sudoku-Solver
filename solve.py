@@ -78,12 +78,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--image_path', 
-                        help = 'Path to image of sudoku',
+                        help = 'Path to image of sudoku(default = \'./assets/sudoku_images/sudoku.jpg\')',
                         type = str,
                         default = './assets/sudoku_images/sudoku.jpg')
     
     parser.add_argument('--model_path',
-                        help = 'Path to model',
+                        help = 'Path to model(default = \'./assets/models/model.keras\')',
                         type = str,
                         default = './assets/models/model.keras')
     

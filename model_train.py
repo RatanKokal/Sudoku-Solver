@@ -83,42 +83,42 @@ train = subparsers.add_parser('train')
 evaluate = subparsers.add_parser('evaluate')
 
 train.add_argument('--saved_model', 
-                    help = 'Saved model to load and train further',
+                    help = 'Saved model to load and train further(default = None)',
                     type = str,
                     default = None)
 
 train.add_argument('--save_as',
-                    help = 'Save model as',
+                    help = 'Save model as(default = \'./assets/models/model.keras\')',
                     type = str,
                     default = './assets/models/model.keras')
 
 train.add_argument('--epochs',
-                    help = 'Number of epochs',
+                    help = 'Number of epochs(default = 15)',
                     type = int,
                     default = 15)
 
 train.add_argument('--batch_size',
-                    help = 'Batch size',
+                    help = 'Batch size(default = 8)',
                     type = int,
                     default = 8)
 
 train.add_argument('--plot',
-                    help = 'Save the plot training and validation accuracy',
+                    help = 'Save the plot training and validation accuracy(default = None)',
                     type = str,
                     default = None)
 
 evaluate.add_argument('--model',
-                    help = 'Path of model to evaluate',
+                    help = 'Path of model to evaluate(default = \'./assets/models/model.keras\')',
                     type = str,
                     default = './assets/models/model.keras')
 
 evaluate.add_argument('--batch_size',
-                    help = 'Batch size',
+                    help = 'Batch size(default = 8)',
                     type = int,
                     default = 8)
 
 evaluate.add_argument('--fraction',
-                    help = 'Fraction of data to evaluate (0, 1)',
+                    help = 'Fraction of data to evaluate (0, 1) (default = 0.1)',
                     type = float,
                     default = 0.1)
 

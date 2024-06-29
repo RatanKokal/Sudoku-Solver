@@ -8,9 +8,23 @@
 ## Dataset used for training tensorflow based CNN model
 [Kaggle Dataset](https://www.kaggle.com/datasets/kshitijdhama/printed-digits-dataset/data) which boosted the accuracy to great extent and is much more useful than MNIST in this case
 
-## Overview/flow
-- `solve.py` is the main interface which solves the sudoku. It takes in two optional arguments `model_path` and `image_path` (path to the unsolved sudoku). It asks the user if they wish to make changes and persists them to make changes until its a vaild sudoku
-- `model_train.py` is used for training and evaluating a certain model. For training one can specify the path to a already trained model to tune it further using `saved_model`, path to save the current model `save_as` (default = `./assets/models/model.keras`), batch size using `batch_size` (default = 8), epochs using `epochs` (default = 15) , plot path if the user wishes to save the performace history while training the model using `plot` and providing the file path (default = None). For evaluate, one can specifiy the model path using `model`, batch size using `batch_size` (default = 8), validation split (should be between 0 and 1) using `fraction` (default = 0.1)
-- `make_predictions.py` does all the image processing and prediction. Model summary as follows:
-![Model Summary](./assets/readme/model_summary.png)
-- `load_data.py` is the data loader for the model
+## Guide to run
+- For solving sudoku: ```python solve.py```
+<img src="./assets/readme/solve_help.png" alternate = "Solve.py help" width="600">
+
+- For training model: ```python model_train.py train```
+<img src="./assets/readme/train_help.png" alternate = "model_train.py train help" width="600">
+
+- For evaluating model: ```python model_train.py evaluate```
+<img src="./assets/readme/evaluate_help.png" alternate = "model_train.py evaluate help" width="600">
+
+## Model Summary
+<img src="./assets/readme/model_summary.png" alternate = "Model Summary" width="400">
+
+## Example of a run
+
+- Command: `python solve.py --image_path ./assets/sudoku_images/sudoku.jpg --model_path ./assets/models/model.keras`
+- Sudoku image:
+<img src="./assets/sudoku_images/sudoku.jpg" alternate = "Unsolved Sudoku" width="400">
+- Terminal result:
+<img src="./assets/readme/terminal.png" alternate = "Terminal" width="600">
